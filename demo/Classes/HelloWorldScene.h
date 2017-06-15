@@ -2,6 +2,13 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "cocostudio/CocoStudio.h"
+#include "ui/CocosGUI.h"
+
+USING_NS_CC;
+
+using namespace cocostudio::timeline;
+using namespace ui;
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -14,6 +21,12 @@ public:
 
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+
+public:
+	void btnEvent(Ref* pSender,Widget::TouchEventType type);
+private:
+	ui::Text* m_txt;
+	ImageView * m_img;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

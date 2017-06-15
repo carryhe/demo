@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include"gamescene\lodingScene.h"
 
 USING_NS_CC;
 
@@ -45,8 +46,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto scene = HelloWorld::createScene();
 
     // run
-    director->runWithScene(scene);
-
+   // director->runWithScene(scene);
+	director->runWithScene(lodingScene::creatlodingScene());
     return true;
 }
 
